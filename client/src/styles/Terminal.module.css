@@ -1,0 +1,108 @@
+.terminalContainer {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1a1d23;
+  border: 1px solid #313640;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 900px;
+  margin: 3rem auto;
+}
+
+.terminalHeader {
+  background-color: #242832;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #313640;
+}
+
+.terminalDots {
+  display: flex;
+  gap: 6px;
+  margin-right: 1rem;
+}
+
+.terminalDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff5f57;
+}
+
+.terminalDot:nth-child(2) {
+  background-color: #febc2e;
+}
+
+.terminalDot:nth-child(3) {
+  background-color: #28c841;
+}
+
+.terminalTitle {
+  color: #8a8d94;
+  font-size: 0.9rem;
+  font-weight: 500;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.terminal {
+  padding: 1rem;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #e4e6ea;
+  height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.terminalLine {
+  margin-bottom: 0.5rem;
+}
+
+.terminalInputLine {
+  display: flex;
+  align-items: center;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #00ffff;
+  margin-left: 1px;
+}
+
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.terminalInactive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #8a8d94;
+  font-style: italic;
+  cursor: pointer;
+}
+
+/* Terminal command colors */
+.terminal strong {
+  color: #00ffff;
+}
+
+.terminal em {
+  color: #8a2be2;
+  font-style: normal;
+}
+
+.terminal code {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
