@@ -436,6 +436,12 @@
 .socialIcon {
   width: 24px;
   height: 24px;
+  align-self: center;
+  display: inline-flex;
+  vertical-align: middle;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
 }
 
 .socialText {
