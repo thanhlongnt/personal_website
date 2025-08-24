@@ -2,36 +2,28 @@ import React from 'react';
 import styles from "../styles/App.module.css";
 
 export default function Bio() {
+
+  const skills = ["Python", "JavaScript", "Java", "C++", "C", "React", "Flask", "FastAPI", "Node.js", "PyTorch", "Hugging Face Transformers", "AWS", "Docker", "MongoDB", "Git", "Linux", "Kubernetes"]
   return (
     <section className={styles.section}>
       <h2 className={styles.sectionTitle}>About</h2>
       <div className={styles.bioContainer}>
         <div className={styles.bioContent}>
           <p className={styles.bio}>
-            Welcome to my corner of the internet. I'm passionate about creating
-            meaningful digital experiences and solving complex problems through
-            code. With a focus on clean, efficient solutions, I strive to bridge the
-            gap between technical excellence and user-centered design.
-          </p>
-          <p className={styles.bio}>
-            When I'm not coding, you can find me exploring new technologies,
-            contributing to open source projects, or enjoying a good book with a cup
-            of coffee.
+            Hello and welcome to my corner of the internet! My full first name is Thanh-Long, but you can call me T.L.. I am currently studying Computer Science at the University of California San Diego as a Regents scholar. I am very interested in learning more about how to built impactful software and about the various applications of the growing field of artificial intelligence/machine learning, as I've always been very interested in innovation in the tech industry. Feel free to reach out!
           </p>
         </div>
         <div className={styles.skillsContainer}>
           <h3 className={styles.skillsTitle}>My Toolbox</h3>
+
+          
           <div className={styles.skillTags}>
-            <span className={styles.skillTag}>React</span>
-            <span className={styles.skillTag}>TypeScript</span>
-            <span className={styles.skillTag}>Node.js</span>
-            <span className={styles.skillTag}>Python</span>
-            <span className={styles.skillTag}>PostgreSQL</span>
-            <span className={styles.skillTag}>AWS</span>
-            <span className={styles.skillTag}>Docker</span>
-            <span className={styles.skillTag}>Git</span>
-            <span className={styles.skillTag}>D3.js</span>
-            <span className={styles.skillTag}>RESTful APIs</span>
+            {/* <span className={styles.skillTag}>React</span> */}
+
+            {
+            skills.map((skill, index) => (
+              <span key={index} className={styles.skillTag}>{skill}</span>))
+            }
           </div>
         </div>
       </div>

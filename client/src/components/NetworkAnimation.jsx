@@ -10,15 +10,13 @@ const NetworkAnimation = () => {
     let animationFrameId;
     let particles = [];
     
-    // Set canvas dimensions
     const setCanvasDimensions = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
     
-    // Create particles
     const createParticles = () => {
-      const particleCount = Math.floor(window.innerWidth * 0.04); // Responsive particle count
+      const particleCount = Math.floor(window.innerWidth * 0.04);
       particles = [];
       
       for (let i = 0; i < particleCount; i++) {
@@ -34,38 +32,30 @@ const NetworkAnimation = () => {
       }
     };
     
-    // Draw the animation
     const render = () => {
-      // Clear canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Update particle positions and draw them
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
         p.connections = [];
         
-        // Move particles
         p.x += p.vx;
         p.y += p.vy;
         
-        // Bounce off edges
         if (p.x < 0 || p.x > canvas.width) p.vx = -p.vx;
         if (p.y < 0 || p.y > canvas.height) p.vy = -p.vy;
         
-        // Draw the particle
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
         ctx.fill();
         
-        // Find connections to other particles
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
           const dx = p.x - p2.x;
           const dy = p.y - p2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           
-          // Connect particles that are close enough
           const maxDistance = canvas.width * 0.05;
           if (distance < maxDistance) {
             const opacity = (1 - distance / maxDistance) * 0.2;
@@ -82,16 +72,13 @@ const NetworkAnimation = () => {
         }
       }
       
-      // Request next frame
       animationFrameId = window.requestAnimationFrame(render);
     };
     
-    // Initialize
     setCanvasDimensions();
     createParticles();
     render();
     
-    // Handle window resize
     const handleResize = () => {
       setCanvasDimensions();
       createParticles();
@@ -99,7 +86,6 @@ const NetworkAnimation = () => {
     
     window.addEventListener('resize', handleResize);
     
-    // Cleanup
     return () => {
       window.cancelAnimationFrame(animationFrameId);
       window.removeEventListener('resize', handleResize);

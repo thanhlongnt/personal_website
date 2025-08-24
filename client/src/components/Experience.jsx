@@ -6,22 +6,34 @@ export default function Experience() {
       <h2 className={styles.sectionTitle}>Experience</h2>
       <div className={styles.experienceContainer}>
         <ExperienceItem
-          title="Open Source Contributor"
-          company="Various"
-          date="2018 - Present"
-          description="Contributed to multiple open source projects, focusing on improving documentation and fixing bugs."
+          title="Software Engineer Intern"
+          company="Lucid Motors"
+          date="June 2025 - Present"
+          description=""
         />
         <ExperienceItem
-          title="Open Source Contributor"
-          company="Various"
-          date="2018 - Present"
-          description="Contributed to multiple open source projects, focusing on improving documentation and fixing bugs."
+          title="VP of Technology"
+          company="UCSD CSE Society"
+          date="June 2025 - Present"
+          // description="Contributed to multiple open source projects, focusing on improving documentation and fixing bugs."
         />
         <ExperienceItem
-          title="Open Source Contributor"
-          company="Various"
-          date="2018 - Present"
-          description="Contributed to multiple open source projects, focusing on improving documentation and fixing bugs."
+          title="Software Engineer"
+          company="UCSD CSE Society"
+          date="June 2025 - Nov 2024"
+          // description="Contributed to multiple open source projects, focusing on improving documentation and fixing bugs."
+        />
+        <ExperienceItem
+          title="Software Engineer Intern"
+          company="Brio"
+          date="June 2024 - Sept 2024"
+          // description="Contributed to multiple open source projects, focusing on improving documentation and fixing bugs."
+        />
+        <ExperienceItem
+          title="Undergraduate Researcher @ SALAD Lab"
+          company="UC San Diego CSE Dept. @ SALAD Lab"
+          date="Sep 2023 - June 2024"
+          // description="Contributed to multiple open source projects, focusing on improving documentation and fixing bugs."
         />
       </div>
     </section>

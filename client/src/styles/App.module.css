@@ -135,11 +135,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 10rem);
+  min-height: 5vh
 }
 
 .headerContent {
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .name {
@@ -298,9 +298,8 @@
 }
 
 .experienceContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-direction: column; 
 }
 
 @media (min-width: 1200px) {
@@ -310,13 +309,16 @@
 }
 
 .experienceItem {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
   padding-left: 1rem;
   border-left: 2px solid #8a2be2;
   background: rgba(26, 29, 35, 0.3);
-  padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid #1a1d23;
   height: fit-content;
+  width: 50%
 }
 
 .experienceTitle {
@@ -328,61 +330,6 @@
 
 .experienceCompany {
   font-size: 1rem;
-  
-/* Terminal integration */
-.terminalWrapper {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 600px;
-  max-width: 90vw;
-  height: 400px;
-  max-height: 50vh;
-  background: rgba(10, 11, 13, 0.9);
-  border: 1px solid #1a1d23;
-  border-radius: 8px;
-  overflow: hidden;
-  z-index: 100;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-}
-
-.terminalHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  background: rgba(26, 29, 35, 0.8);
-  border-bottom: 1px solid #1a1d23;
-}
-
-.terminalHeader span {
-  font-size: 0.9rem;
-  color: #9ca3af;
-}
-
-.closeTerminal {
-  background: none;
-  border: none;
-  color: #9ca3af;
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-}
-
-.closeTerminal:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #e4e6ea;
-}
-  color: #9ca3af;
-  margin: 0 0 0.5rem 0;
 }
 
 .experienceDate {
@@ -443,6 +390,19 @@
   color: #8a2be2;
   font-style: italic;
   font-weight: 500;
+}
+
+.projectLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.socialIcon {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 .socialLinks {
