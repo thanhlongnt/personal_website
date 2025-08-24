@@ -27,7 +27,7 @@ const PersonalWebsite = () => {
             <li><a onClick={() => handleNavClick('home')} className={activeSection === 'home' ? styles.active : ''}>Home</a></li>
             <li><a onClick={() => handleNavClick('about')} className={activeSection === 'about' ? styles.active : ''}>About</a></li>
             <li><a onClick={() => handleNavClick('experience')} className={activeSection === 'experience' ? styles.active : ''}>Experience</a></li>
-            {/* <li><a onClick={() => handleNavClick('projects')} className={activeSection === 'projects' ? styles.active : ''}>Projects</a></li> */}
+            <li><a onClick={() => handleNavClick('projects')} className={activeSection === 'projects' ? styles.active : ''}>Projects</a></li>
             <li><a onClick={() => handleNavClick('contact')} className={activeSection === 'contact' ? styles.active : ''}>Contact</a></li>
           </ul>
         </div>
