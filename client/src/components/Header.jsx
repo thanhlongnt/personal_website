@@ -6,7 +6,7 @@ export default function Header(){
         <header className={styles.header}>
             <div className={styles.headerContent}>
                 <h1 className={styles.name}>Thanh-Long (T.L.) Nguyen-Trong</h1>
-                <p className={styles.title}>Software Developer & Creative Problem Solver</p>
+                <p className={styles.title}>Aspiring software engineer</p>
             </div>
         </header>
     );
